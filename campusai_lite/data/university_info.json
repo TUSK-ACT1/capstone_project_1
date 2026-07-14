@@ -1,0 +1,81 @@
+{
+  "university": {
+    "name": "TechVista University",
+    "established": 1985,
+    "location": "Silicon Valley, CA",
+    "website": "https://techvista.edu",
+    "contact": "info@techvista.edu"
+  },
+  "departments": [
+    {
+      "name": "Computer Science",
+      "head": "Dr. Alice Chen",
+      "programs": ["B.Sc. CS", "M.Sc. CS", "Ph.D. CS"],
+      "credits_required": {"bachelors": 120, "masters": 36, "phd": 72}
+    },
+    {
+      "name": "Data Science",
+      "head": "Dr. Bob Patel",
+      "programs": ["B.Sc. DS", "M.Sc. DS"],
+      "credits_required": {"bachelors": 118, "masters": 34}
+    },
+    {
+      "name": "Artificial Intelligence",
+      "head": "Dr. Carol Kim",
+      "programs": ["M.Sc. AI", "Ph.D. AI"],
+      "credits_required": {"masters": 36, "phd": 72}
+    },
+    {
+      "name": "Business Administration",
+      "head": "Dr. David Osei",
+      "programs": ["BBA", "MBA"],
+      "credits_required": {"bachelors": 128, "masters": 60}
+    }
+  ],
+  "admissions": {
+    "undergraduate": {
+      "open_date": "January 15",
+      "deadline": "March 31",
+      "requirements": ["High school diploma", "SAT/ACT scores", "Two recommendation letters", "Personal statement"],
+      "min_gpa": 3.0
+    },
+    "graduate": {
+      "open_date": "October 1",
+      "deadline": "December 15",
+      "requirements": ["Bachelor's degree", "GRE scores", "Three recommendation letters", "Statement of purpose", "Resume/CV"],
+      "min_gpa": 3.2
+    }
+  },
+  "tuition": {
+    "undergraduate": {"in_state": 12000, "out_of_state": 28000, "international": 34000},
+    "graduate": {"in_state": 14000, "out_of_state": 30000, "international": 36000},
+    "financial_aid": "Available — visit financial-aid@techvista.edu"
+  },
+  "facilities": [
+    "Main Library (24/7 access)",
+    "Innovation Lab",
+    "AI Research Center",
+    "Student Wellness Center",
+    "Dormitories (on-campus housing for 4,000 students)",
+    "Sports Complex"
+  ],
+  "academic_calendar": {
+    "fall_semester": {"start": "August 25", "end": "December 15"},
+    "spring_semester": {"start": "January 20", "end": "May 10"},
+    "summer_session": {"start": "June 5", "end": "July 30"},
+    "holidays": ["Thanksgiving (Nov 28-30)", "Winter Break (Dec 16 - Jan 19)", "Spring Break (Mar 17-21)"]
+  },
+  "student_services": {
+    "academic_advising": "advising@techvista.edu",
+    "career_center": "careers@techvista.edu",
+    "counseling": "wellness@techvista.edu",
+    "registrar": "registrar@techvista.edu",
+    "library": "library@techvista.edu"
+  },
+  "research": {
+    "annual_funding": "$45M",
+    "active_projects": 120,
+    "industry_partners": ["Google", "Microsoft", "OpenAI", "NVIDIA"],
+    "publication_count_2024": 340
+  }
+}
