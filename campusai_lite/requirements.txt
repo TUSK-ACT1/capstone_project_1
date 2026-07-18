@@ -1,27 +1,30 @@
 
 # ── Core LLM frameworks ────────────────────────────────────────────────────────
-crewai>=0.80.0
-crewai-tools>=0.14.0
+crewai>=0.60.0
+crewai-tools
 langchain>=0.3.0
+langchain-core>=0.3.0
 langchain-openai>=0.2.0
 langchain-community>=0.3.0
-langgraph>=0.2.0
+langgraph
 
 # ── Structured validation ──────────────────────────────────────────────────────
+# pydantic-ai pins its own pydantic constraint; declare pydantic once here and
+# let the resolver satisfy both.  pydantic-ai >=0.0.14 supports pydantic >=2.7.
+pydantic>=2.7.0,<3.0.0
 pydantic-ai>=0.0.14
-pydantic>=2.7.0
 
 # ── Document parsing ───────────────────────────────────────────────────────────
-docling>=2.0.0
+docling
 
 # ── Multi-agent frameworks (Part B) ───────────────────────────────────────────
-pyautogen>=0.2.35          # AG2 / AutoGen
+pyautogen                  # AG2 / AutoGen
 # bee-agent-framework     # BeeAI – install via: pip install bee-agent-framework
 
 # ── UI ────────────────────────────────────────────────────────────────────────
-gradio>=4.40.0
+gradio
 
 # ── Utilities ─────────────────────────────────────────────────────────────────
 python-dotenv>=1.0.0
 httpx>=0.27.0
-tiktoken>=0.7.0
+tiktoken

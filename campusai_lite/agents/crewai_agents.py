@@ -3,9 +3,13 @@ campusai_lite/agents/crewai_agents.py
 Part A – CrewAI multi-agent system for CampusAI Lite.
 
 Agents:
-  1. PlannerAgent   – decomposes the student's question into sub-tasks
+  1. PlannerAgent     – decomposes the student's question into sub-tasks
   2. InformationAgent – retrieves university data using tools
   3. ValidationAgent  – validates the answer for accuracy and completeness
+
+NOTE: Requires crewai and crewai-tools. If not installed the module degrades
+gracefully: CREWAI_AVAILABLE is set to False and run_crewai() returns a
+helpful installation message instead of raising an ImportError.
 """
 
 from __future__ import annotations
@@ -100,7 +104,7 @@ def create_information_agent(llm: ChatOpenAI) -> Agent:
         verbose=True,
         allow_delegation=False,
         llm=llm,
-        tools=[university_info_lookup, parse_university_document],
+        tools=[university_info_lookup, parse_university_document] if CREWAI_AVAILABLE else [],
     )
 
 
@@ -202,13 +206,14 @@ def run_crewai(question: str) -> str:
         return (
             "⚠️ CrewAI is not installed on this Python version yet.\n"
             "Install with: pip install crewai crewai-tools\n"
-            "Try the LangChain or LangGraph framework instead."
+            "Then restart the application."
         )
     crew = build_campusai_crew(question)
     result = crew.kickoff()
+    # CrewAI ≥0.60 returns a CrewOutput object; coerce to str for consistency.
     return str(result)
 
 
 if __name__ == "__main__":
-    sample = "What are the admission requirements and tuition fees for the graduate CS program?"
+    sample = "What are the admission requirements for the Computer Science graduate program?"
     print(run_crewai(sample))
